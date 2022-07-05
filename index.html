@@ -1,0 +1,74 @@
+<html lang="en">
+    <head>
+    <!-- SEO, CHARSETS, AND BASIC CONFIG-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">    
+
+    <!-- PWA -->
+
+    <!-- Android -->
+    <meta name="theme-color" content="#3b5998">
+
+    <!-- LIBRARIES -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- LINKS AND STYLES -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- SCRIPTS -->
+    <script src="./js/index.js" defer="" type="module"></script>    
+    <title id="titulo">Mis notas</title>
+</head>
+<body cz-shortcut-listen="true">
+    <nav class="navbar navbar-expand-lg navbar-dark" data-nm="true" data-bg="#3b5998" style="background-color: rgb(59, 89, 152);">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" id="titulo">Debounce JavaScript</a>
+            <button id="toggler" class="d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#side_bar" aria-controls="side_bar" style="background-color: rgba(255, 255, 255, 0.25); border: none; border-radius: 50%; padding: 0.5em; width: 2.5em;">
+                ≡
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="menu">
+                <li class="nav-item"><a class="nav-link active" href="#enlace">Enlace</a></li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">Adicionales</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#contacto">contacto</a></li>
+                    </ul>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="offcanvas offcanvas-start navbar-dark" data-bg="#3b5998" style="width: 300px; background-color: rgb(59, 89, 152);" ;="" tabindex="-1" id="side_bar" aria-labelledby="side_titulo">
+        <div>
+            <img src="https://cristian021195.github.io/portfolio/public/img/metas/dev-icon.svg" alt="" width="100%" id="foto_perfil">
+        </div>
+        <div class="offcanvas-header">
+            <a class="navbar-brand" href="#" id="side_titulo">Mis notas</a>
+            <!--<h5 class="offcanvas-title" id="side_titulo"></h5>-->
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="side_menu">
+                <li class="nav-item"><a class="nav-link active" href="#notas">notas</a></li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">adicionales</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#pwa">pwa</a></li>
+                        <li><a class="dropdown-item" href="#contacto">contacto</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <main class="row p-2 mx-auto" id="main">
+        <form id="debounce-form" class="col-md-4 mx-auto form">
+            <input type="text" name="debounce-input" id="debounce-input" placeholder="Escriba texto.." class="form-control">
+            <hr>
+            <p><strong>Texto: </strong><span id="resultado"></span></p>
+            <p><strong>Cantidad de letras: </strong><span id="letras"></span></p>
+        </form>
+        
+    </main>
+</body></html>
