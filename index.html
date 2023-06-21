@@ -3,7 +3,8 @@
     <!-- SEO, CHARSETS, AND BASIC CONFIG-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <link rel="shortcut icon" href="https://cdn.reverso.net/context/v63300/images/reverso-context.ico">
 
     <!-- PWA -->
 
@@ -19,7 +20,7 @@
 
     <!-- SCRIPTS -->
     <script src="./js/index.js" defer="" type="module"></script>    
-    <title id="titulo">Mis notas</title>
+    <title id="titulo">Debounce / Retardo</title>
 </head>
 <body cz-shortcut-listen="true">
     <nav class="navbar navbar-expand-lg navbar-dark" data-nm="true" data-bg="#3b5998" style="background-color: rgb(59, 89, 152);">
@@ -63,12 +64,32 @@
         </div>
     </div>
     <main class="row p-2 mx-auto" id="main">
-        <form id="debounce-form" class="col-md-4 mx-auto form">
-            <input type="text" name="debounce-input" id="debounce-input" placeholder="Escriba texto.." class="form-control">
-            <hr>
-            <p><strong>Texto: </strong><span id="resultado"></span></p>
-            <p><strong>Cantidad de letras: </strong><span id="letras"></span></p>
-        </form>
-        
+        <h1>Debounce / Retardo</h1>
+        <p><i>A menudo usado para prevenir multiples solicitudes HTTP (request), o prevenir la multiple ejecucion de funciones pesadas y complejas, <br> <a href="./js/index.js" download class="btn btn-sm btn-success">Descargar Codigo</a></i></p>
+        <section>
+            <div style="text-align: center;">
+                <h2>Vanilla JS</h2>
+            </div>
+            <form id="debounce-form" class="col-md-4 mx-auto form">
+                <input type="text" name="debounce-input" id="debounce-input" placeholder="Escriba texto.." class="form-control">
+                <hr>
+                <p><strong>Texto: </strong><span id="resultado"></span></p>
+                <p><strong>Cantidad de letras: </strong><span id="letras"></span></p>
+            </form>
+        </section>
+        <br>
+        <section>
+            <div style="text-align: center;">
+                <h2>Con Lodash</h2>
+            </div>            
+            <form id="lodash-form" class="col-md-4 mx-auto form">
+                <input type="text" name="lodash-input" id="lodash-input" placeholder="Escriba texto.." class="form-control">
+                <hr>
+                <p><strong>Texto: </strong><span id="lodash-resultado"></span></p>
+                <p><strong>Cantidad de letras: </strong><span id="lodash-letras"></span></p>
+            </form>
+        </section>
     </main>
-</body></html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+</body>
+</html>
