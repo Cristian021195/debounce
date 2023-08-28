@@ -10,7 +10,6 @@ const $lodash_letras = document.getElementById('lodash-letras');
 let select_time = 1000;
 $valores.addEventListener('change', (e)=>{
     select_time = parseInt(e.target.value);
-    console.log("cambia st:",select_time);
 })
 
 const ActualizarResultado = Debounce((text, long)=>{//Debounce, se ejecuta una sola vez, y ActualizarResultado pasa a tener lo mismo que Debounce
@@ -31,7 +30,6 @@ function Debounce(callback, delay){
     let timer;    
     return (...args) => {//recibe los dos argumentos en forma de array de ActualizarResultado, el e.target.value y length y luego hace el spread ['a',1] ... ['asd',3]
         timer && clearTimeout(timer);
-        console.log();
         timer = setTimeout(() => {
             callback(...args)//recibe los dos argumentos en forma de array de ActualizarResultado, el e.target.value y length y luego hace el spread = ['asd',3]
         }, args[args.length - 1]);
