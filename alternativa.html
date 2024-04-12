@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="./index.html">volver</a>
+    <hr>
+    <input type="text" id="entr">
+    <p id="parr"></p>
+    <script>
+
+        const $entr = document.getElementById('entr');
+        const $parr = document.getElementById('parr');
+
+        $entr.addEventListener('input',debounce((e)=>{
+            $parr.textContent = $entr.value;
+        },1000))
+
+        function debounce(fn,t){
+            let timer;
+            return ()=>{
+                clearTimeout(timer);
+                timer = setTimeout(fn,t);
+            }
+        }
+    </script>
+</body>
+</html>

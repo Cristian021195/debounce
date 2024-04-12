@@ -33,6 +33,13 @@ function Debounce(callback, delay){
         timer = setTimeout(() => {
             callback(...args)//recibe los dos argumentos en forma de array de ActualizarResultado, el e.target.value y length y luego hace el spread = ['asd',3]
         }, args[args.length - 1]);
+    }    
+}
+
+function retardo(fn,t){
+    let timer;
+    return ()=>{
+        clearTimeout(timer);
+        timer = setTimeout(fn,t);
     }
-    
 }
