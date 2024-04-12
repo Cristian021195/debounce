@@ -26,6 +26,14 @@
                 timer = setTimeout(fn,t);
             }
         }
+
+        function altDeb(fn,t){
+            let timer;
+            return (...args)=>{
+                clearTimeout(timer);
+                timer = setTimeout(fn,t,...args);
+            }
+        }
     </script>
 </body>
 </html>
